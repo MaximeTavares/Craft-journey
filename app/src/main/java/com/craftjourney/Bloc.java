@@ -1,6 +1,6 @@
 package com.craftjourney;
 
-public abstract class Bloc {
+public abstract class Bloc implements IBloc {
 
     protected int length;
     protected int width;
@@ -10,10 +10,6 @@ public abstract class Bloc {
         this.length = length;
         this.width = width;
         this.height = height;
-    }
-
-    public void displayDescription() {
-        System.out.println("This is a bloc.");
     }
 
     public int getLength() {
