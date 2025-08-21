@@ -3,12 +3,14 @@ package com.craftjourney;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import com.craftjourney.exceptions.IllegalBlocException;
+
 public class Kit {
 
     private Set<IBloc> blocs = new LinkedHashSet<IBloc>();
     private Set<String> keywords = new LinkedHashSet<String>();
 
-    public Kit() {
+    public Kit() throws IllegalBlocException {
         // Initialize the kit with some default blocs
         blocs.add(new Wall(3, 2, 2, true));
         blocs.add(new Wall(3, 2, 2, true));

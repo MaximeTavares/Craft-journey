@@ -1,5 +1,7 @@
 package com.craftjourney;
 
+import com.craftjourney.exceptions.IllegalBlocException;
+
 public abstract class Bloc implements IBloc {
 
     protected int length;
@@ -7,7 +9,11 @@ public abstract class Bloc implements IBloc {
     protected int height;
     protected Couleur couleur;
 
-    public Bloc(final int length, final int width, final int height) {
+    public Bloc(final int length, final int width, final int height) throws IllegalBlocException {
+        if (length < MIN_LENGTH || width < MIN_WIDTH || height < MIN_HEIGHT) {
+            throw new IllegalBlocException();
+        }
+
         this.length = length;
         this.width = width;
         this.height = height;
