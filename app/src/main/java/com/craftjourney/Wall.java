@@ -7,6 +7,7 @@ public class Wall extends Bloc {
     public Wall(final int length, final int width, final int height, final boolean isSolid) {
         super(length, width, height);
         this.isSolid = isSolid;
+        this.couleur = Couleur.GRIS; // Default color for walls
     }
 
     @Override

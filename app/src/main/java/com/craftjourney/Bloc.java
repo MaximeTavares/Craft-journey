@@ -5,6 +5,7 @@ public abstract class Bloc implements IBloc {
     protected int length;
     protected int width;
     protected int height;
+    protected Couleur couleur;
 
     public Bloc(final int length, final int width, final int height) {
         this.length = length;
@@ -22,6 +23,10 @@ public abstract class Bloc implements IBloc {
 
     public int getHeight() {
         return height;
+    }
+
+    public void setCouleur(Couleur couleur) {
+        this.couleur = couleur;
     }
 
 }

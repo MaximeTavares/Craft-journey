@@ -7,6 +7,7 @@ public class Door extends Bloc {
     public Door(final int length, final int width, final int height, final boolean isLocked) {
         super(length, width, height);
         this.isLocked = isLocked;
+        this.couleur = Couleur.BLEU; // Default color for doors
     }
 
     @Override
