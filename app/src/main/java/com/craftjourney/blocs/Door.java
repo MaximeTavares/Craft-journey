@@ -1,9 +1,14 @@
-package com.craftjourney;
+package com.craftjourney.blocs;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.craftjourney.exceptions.IllegalBlocException;
 import com.craftjourney.exceptions.LockedDoorException;
 
 public class Door extends Bloc {
+
+    private static Logger logger = LogManager.getLogger(Door.class);
 
     private boolean isLocked;
 
@@ -34,6 +39,7 @@ public class Door extends Bloc {
         if (isLocked == false) {
             isLocked = true;
         } else {
+            logger.error("Attempted to lock an already locked door.");
             throw new LockedDoorException();
         }
         

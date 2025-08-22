@@ -1,4 +1,4 @@
-package com.craftjourney;
+package com.craftjourney.blocs;
 
 public enum Couleur {
 

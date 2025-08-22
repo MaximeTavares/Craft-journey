@@ -3,6 +3,9 @@ package com.craftjourney;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import com.craftjourney.blocs.Door;
+import com.craftjourney.blocs.IBloc;
+import com.craftjourney.blocs.Wall;
 import com.craftjourney.exceptions.IllegalBlocException;
 
 public class Kit {
